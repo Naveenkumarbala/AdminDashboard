@@ -1,0 +1,63 @@
+.widget
+{
+    display:flex;
+    flex:1;
+    padding:10px;
+    justify-content:space-between;
+    -webkit-box-shadow:2px 4px 10px 1px rgba(0,0,0,0.47);
+    box-shadow:2px 4px 10px 1px rgba(201,201,201,0.47);
+    border-radius:10px;
+    height:100px; 
+    .left,.right
+    {
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        .title
+        {
+            font-weight:bold;
+            font-size: 14px;
+            color:rgb(160,160,160);
+        }
+        .counter
+        {
+            font-size:28px;
+            font-weight:300;
+        }
+        .link
+        {
+          width:max-content;
+            font-size:12px;
+            border-bottom:1px solid gray;
+        }
+        .percentage
+        {
+            display:flex;
+            align-items:center;
+            font-size:14px;
+            // ambersand indicates parent that is percentage and its child is positive
+            &.positive
+            {
+                color:green;
+            }
+            &.negative
+            {
+                color:red;
+            }
+        }
+        .icon
+        {
+            font-size:18px;
+            padding:5px;
+            // background-color: rgba(227, 8, 227, 0.541);
+            border-radius:5px;
+            align-self:flex-end;
+        }
+    }
+}
+
+// Description
+//search for box shadow generator based on your requirements u can adjust it.
+// The align-self property in Flexbox is used to control the alignment of a flex item along the cross-axis,
+// overriding the align-items value set on the flex container. If you want a flex item to align itself to the end of the cross-axis,
+// you can use align-self: flex-end;
